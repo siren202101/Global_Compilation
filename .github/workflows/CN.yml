@@ -1,0 +1,60 @@
+name: Download and Process CN URLs
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  process-cn-urls:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许推送更改
+
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v3
+
+      - name: 下载 cn_urls.txt
+        run: |
+          curl -L -o cn_urls.txt "https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt"
+
+      - name: 读取链接并下载文件
+        run: |
+          mkdir -p downloaded_files
+          mkdir -p logs
+          failed_count=0
+          failed_log="logs/cn_failed_downloads.log"
+          
+          # 记录日志起始信息
+          echo "===== 下载失败日志 =====" > "$failed_log"
+          echo "时间: $(date)" >> "$failed_log"
+          
+          while IFS= read -r url; do
+            if [ -n "$url" ]; then
+              if ! curl -L --retry 3 --max-time 10 "$url" >> downloaded_files/merged.txt; then
+                echo "$url" >> "$failed_log"
+                ((failed_count++))
+              else
+                echo "" >> downloaded_files/merged.txt
+              fi
+            fi
+          done < cn_urls.txt
+          
+          echo "下载失败的总数: $failed_count" >> "$failed_log"
+          
+          # 确保日志文件存在，即使没有失败的下载
+          touch "$failed_log"
+
+      - name: 处理合并的文件
+        run: |
+          mkdir -p output
+          grep '^DOMAIN-SUFFIX,' downloaded_files/merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/cn_urls.conf
+
+      - name: 提交更改
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add output/cn_urls.conf logs/cn_failed_downloads.log
+          git commit -m "更新 cn_urls.conf 并记录下载失败日志" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main
