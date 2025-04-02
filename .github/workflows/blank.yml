@@ -41,12 +41,12 @@ jobs:
       - name: 处理合并的文件
         run: |
           mkdir -p output
-          grep '^DOMAIN-SUFFIX,' downloaded_files/merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/processed.conf
+          grep '^DOMAIN-SUFFIX,' downloaded_files/merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/Global_Gfwlist.conf
 
       - name: 提交更改
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add output/processed.txt logs/failed_downloads.log
-          git commit -m "更新 processed.txt 并记录下载失败日志" || echo "No changes to commit"
+          git add output/Global_Gfwlist.conf logs/failed_downloads.log
+          git commit -m "更新 Global_Gfwlist.conf 并记录下载失败日志" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main
