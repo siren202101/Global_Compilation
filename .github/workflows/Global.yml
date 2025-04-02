@@ -25,10 +25,12 @@ jobs:
           mkdir -p logs
           failed_count=0
           failed_log="logs/failed_downloads.log"
-          > "$failed_log"
+          echo "===== 下载失败日志 =====" > "$failed_log"
+          echo "时间: $(date)" >> "$failed_log"
+          
           while IFS= read -r url; do
             if [ -n "$url" ]; then
-              if ! curl -L "$url" >> downloaded_files/merged.txt; then
+              if ! curl -L --retry 3 --max-time 10 "$url" >> downloaded_files/merged.txt; then
                 echo "$url" >> "$failed_log"
                 ((failed_count++))
               else
@@ -36,7 +38,11 @@ jobs:
               fi
             fi
           done < Global_Compilation.txt
-          echo "下载失败的链接数量: $failed_count" >> "$failed_log"
+          
+          echo "下载失败的总数: $failed_count" >> "$failed_log"
+          
+          # 确保日志文件存在，即使没有失败的下载
+          touch "$failed_log"
 
       - name: 处理合并的文件
         run: |
