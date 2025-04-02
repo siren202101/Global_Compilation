@@ -37,4 +37,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add output/processed.txt
           git commit -m "更新 processed.txt" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main
+          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main
