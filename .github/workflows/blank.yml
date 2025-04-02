@@ -22,9 +22,21 @@ jobs:
       - name: 读取链接并下载文件
         run: |
           mkdir -p downloaded_files
+          mkdir -p logs
+          failed_count=0
+          failed_log="logs/failed_downloads.log"
+          > "$failed_log"
           while IFS= read -r url; do
-            [ -n "$url" ] && curl -L "$url" >> downloaded_files/merged.txt && echo "" >> downloaded_files/merged.txt
+            if [ -n "$url" ]; then
+              if ! curl -L "$url" >> downloaded_files/merged.txt; then
+                echo "$url" >> "$failed_log"
+                ((failed_count++))
+              else
+                echo "" >> downloaded_files/merged.txt
+              fi
+            fi
           done < Global_Compilation.txt
+          echo "下载失败的链接数量: $failed_count" >> "$failed_log"
 
       - name: 处理合并的文件
         run: |
@@ -35,6 +47,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add output/processed.txt
-          git commit -m "更新 processed.txt" || echo "No changes to commit"
+          git add output/processed.txt logs/failed_downloads.log
+          git commit -m "更新 processed.txt 并记录下载失败日志" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main
