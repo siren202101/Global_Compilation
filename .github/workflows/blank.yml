@@ -41,7 +41,7 @@ jobs:
       - name: 处理合并的文件
         run: |
           mkdir -p output
-          grep '^DOMAIN-SUFFIX,' downloaded_files/merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/processed.txt
+          grep '^DOMAIN-SUFFIX,' downloaded_files/merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/processed.conf
 
       - name: 提交更改
         run: |
