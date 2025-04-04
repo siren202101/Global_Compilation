@@ -48,6 +48,7 @@ jobs:
       - name: 下载并处理 accelerated-domains.china.conf
         run: |
           curl -L -o downloaded_files/accelerated.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf
+          grep -v '^#' downloaded_files/accelerated.conf | \
           sed -e 's/^server=\/\(.*\)\/114.114.114.114/\1/' downloaded_files/accelerated.conf >> output/cn_urls.conf
 
       - name: 合并并去重为 cn_list.conf
