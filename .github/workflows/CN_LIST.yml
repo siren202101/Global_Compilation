@@ -48,30 +48,16 @@ jobs:
       - name: 下载并处理 accelerated-domains.china.conf
         run: |
           curl -L -o downloaded_files/accelerated.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf
-          grep -v '^#' downloaded_files/accelerated.conf | \
-          sed -n 's/^server=\/\(.*\)\/114.114.114.114/\1/p' >> output/cn_urls.conf
+          sed -e 's/^server=\/\(.*\)\/114.114.114.114/\1/' downloaded_files/accelerated.conf >> output/cn_urls.conf
 
-      - name: 合并并去重为 cn_list.temp
+      - name: 合并并去重为 cn_list.conf
         run: |
           sort -u output/cn_urls.conf > output/cn_list.temp
 
-      - name: 下载 Global_Gfwlist.conf 并按域名后缀去重
+      - name: 下载 Global_Gfwlist.conf 并排除重复
         run: |
           curl -L -o downloaded_files/gfwlist.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/output/Global_Gfwlist.conf
-
-          # 使用 awk 按后缀过滤 cn_list.temp
-          awk 'NR==FNR{bad[$0]; next}
-               {
-                 keep=1
-                 for (b in bad) {
-                   if ($0 ~ ("\\." b "$") || $0 == b) {
-                     keep=0
-                     break
-                   }
-                 }
-                 if (keep) print $0
-               }' downloaded_files/gfwlist.txt output/cn_list.temp > output/cn_list.conf
-
+          grep -vxFf downloaded_files/gfwlist.txt output/cn_list.temp > output/cn_list.conf
           rm output/cn_list.temp
 
       - name: 提交更改
@@ -79,5 +65,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add output/cn_list.conf logs/cn_failed_downloads.log
-          git commit -m "更新 cn_list.conf（域名后缀去重）并记录下载失败日志" || echo "No changes to commit"
+          git commit -m "更新 cn_list.conf 并记录下载失败日志" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main
