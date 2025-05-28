@@ -43,13 +43,15 @@ jobs:
         run: |
           echo "Run time: $(date -u)" >> logs/Global_failed_downloads.log
 
-      - name: Commit and push
-        env:
-          TOKEN: ${{ secrets.GG_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+- name: Commit and push
+  env:
+    TOKEN: ${{ secrets.GG_TOKEN }}
+  run: |
+    git config user.name "siren202101"
+    git config user.email "siren202101@protonmail.com"
 
-          git add output/Global_List.conf logs/Global_failed_downloads.log
-          git commit -m "Update Global_List.conf and download logs [CI]" || echo "No changes to commit"
-          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+    git add output/Global_List.conf logs/Global_failed_downloads.log
+    git commit -m "Update Global_List.conf and download logs [CI]" || echo "No changes to commit"
+
+    git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+
