@@ -59,9 +59,8 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          
+          # 强制提交新生成的文件
           git add output/cn_list.conf logs/cn_failed_downloads.log
-          timestamp=$(date)
-          git commit -m "Update cn_list.conf and failed downloads log - $timestamp" || echo "No changes to commit"
+          git commit --amend --no-edit || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force
-
-
