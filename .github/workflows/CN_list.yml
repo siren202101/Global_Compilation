@@ -59,8 +59,10 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          
-          # 强制提交新生成的文件
+
+          # 强制提交文件
           git add output/cn_list.conf logs/cn_failed_downloads.log
           git commit --amend --no-edit || echo "No changes to commit"
+
+          # ✅ 用 PAT 明确推送（这个才会用 GG_TOKEN，而不是默认bot）
           git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force
