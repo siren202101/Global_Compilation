@@ -1,0 +1,67 @@
+name: Download and Process CN List
+
+on:
+  schedule:
+    - cron: '0 0 * * 3'  # 每天执行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  process-cn-urls:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许推送更改
+
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v3
+
+      - name: 下载 cn_urls.txt
+        run: |
+          curl -L -o cn_urls.txt "https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt"
+
+      - name: 读取链接并下载文件
+        run: |
+          mkdir -p downloaded_files logs
+          failed_log="logs/cn_failed_downloads.log"
+          > "$failed_log"
+          echo "===== 下载失败日志 =====" >> "$failed_log"
+          echo "时间: $(date)" >> "$failed_log"
+          failed_count=0
+          while IFS= read -r url; do
+            if [ -n "$url" ]; then
+              if ! curl -L --retry 3 --max-time 10 "$url" >> downloaded_files/cn_merged.txt; then
+                echo "$url" >> "$failed_log"
+                ((failed_count++))
+              else
+                echo "" >> downloaded_files/cn_merged.txt
+              fi
+            fi
+          done < cn_urls.txt
+          echo "下载失败的总数: $failed_count" >> "$failed_log"
+          touch "$failed_log"
+
+      - name: 处理 cn_urls 合并的文件
+        run: |
+          mkdir -p output
+          grep '^DOMAIN-SUFFIX,' downloaded_files/cn_merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/cn_urls.conf
+
+      - name: 下载并处理 accelerated-domains.china.conf
+        run: |
+          curl -L -o downloaded_files/accelerated.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf
+          grep -v '^#' downloaded_files/accelerated.conf | \
+          sed -e 's/^server=\/\(.*\)\/114.114.114.114/\1/' >> output/cn_urls.conf
+
+      - name: 去重为 cn_list.conf
+        run: |
+          sort -u output/cn_urls.conf > output/cn_list.conf
+
+
+      - name: 强制提交更改
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+          # 强制提交文件和日志，即使内容没有变化
+          git add output/cn_list.conf logs/cn_failed_downloads.log
+          git commit --amend --no-edit || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force

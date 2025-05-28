@@ -1,0 +1,68 @@
+name: Download and Global LIST
+
+on:
+  schedule:
+    - cron: '0 0 * * 6'  # 每天运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  process-files:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许推送更改
+
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v3
+
+      - name: 下载 Global_Compilation.txt
+        run: |
+          curl -L -o Global_Compilation.txt "https://raw.githubusercontent.com/siren202101/Global_Compilation/main/Global_Compilation.txt"
+
+      - name: 读取链接并下载文件
+        run: |
+          mkdir -p downloaded_files
+          mkdir -p logs
+          failed_count=0
+          failed_log="logs/Global_downloads.log"
+          echo "===== 下载失败日志 =====" > "$failed_log"
+          echo "时间: $(date)" >> "$failed_log"
+          
+          while IFS= read -r url; do
+            if [ -n "$url" ]; then
+              if ! curl -L --retry 3 --max-time 10 "$url" >> downloaded_files/merged.txt; then
+                echo "$url" >> "$failed_log"
+                ((failed_count++))
+              else
+                echo "" >> downloaded_files/merged.txt
+              fi
+            fi
+          done < Global_Compilation.txt
+          
+          echo "下载失败的总数: $failed_count" >> "$failed_log"
+          touch "$failed_log"
+
+      - name: 下载并合并 gfw.txt
+        run: |
+          mkdir -p output
+          
+          # 处理 merged.txt，去掉 DOMAIN-SUFFIX, 前缀
+          grep '^DOMAIN-SUFFIX,' downloaded_files/merged.txt | sed 's/^DOMAIN-SUFFIX,//' > output/temp_list.txt
+          
+          # 下载 gfw.txt 并追加
+          curl -L -o downloaded_files/gfw.txt "https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt"
+          cat downloaded_files/gfw.txt >> output/temp_list.txt
+
+          # 去重并输出为 Global_LIST.conf
+          sort -u output/temp_list.txt > output/Global_LIST.conf
+          rm output/temp_list.txt
+
+      - name: 强制提交更改
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+          # 强制提交文件和日志，即使内容没有变化
+          git add output/Global_LIST.conf logs/Global_downloads.log
+          git commit --amend --no-edit || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force
