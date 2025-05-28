@@ -1,994 +1,1 @@
-===== 下载失败日志 =====
-时间: Wed May 28 13:06:26 UTC 2025
-下载失败的总数: 0
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 28951  100 28951    0     0   701k      0 --:--:-- --:--:-- --:--:--  706k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4647  100  4647    0     0   121k      0 --:--:-- --:--:-- --:--:--  122k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   863  100   863    0     0  23787      0 --:--:-- --:--:-- --:--:-- 23972
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DiDi/DiDi.list at Wed May 28 13:48:24 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   259  100   259    0     0   2491      0 --:--:-- --:--:-- --:--:--  2514
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MeiTu/MeiTu.list at Wed May 28 13:48:24 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   239  100   239    0     0   2500      0 --:--:-- --:--:-- --:--:--  2515
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Pinduoduo/Pinduoduo.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2994  100  2994    0     0  25220      0 --:--:-- --:--:-- --:--:-- 25372
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Sina/Sina.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6981  100  6981    0     0  66076      0 --:--:-- --:--:-- --:--:-- 66485
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Baidu/Baidu.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6789  100  6789    0     0  63819      0 --:--:-- --:--:-- --:--:-- 63448
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/360/360.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   479  100   479    0     0   2504      0 --:--:-- --:--:-- --:--:--  2507
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/4399/4399.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   261  100   261    0     0   2381      0 --:--:-- --:--:-- --:--:--  2394
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/VipShop/VipShop.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4325  100  4325    0     0  31236      0 --:--:-- --:--:-- --:--:-- 31340
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   269  100   269    0     0   2551      0 --:--:-- --:--:-- --:--:--  2561
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Weibo/Weibo.list at Wed May 28 13:48:25 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9649  100  9649    0     0   194k      0 --:--:-- --:--:-- --:--:--  196k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 99960  100 99960    0     0   852k      0 --:--:-- --:--:-- --:--:--  856k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 3139k    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3139k  100 3139k    0     0  18.1M      0 --:--:-- --:--:-- --:--:-- 18.1M
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 1136k  100 1136k    0     0  8703k      0 --:--:-- --:--:-- --:--:-- 8739k
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs.list at Wed May 28 13:48:26 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 1136k  100 1136k    0     0  13.7M      0 --:--:-- --:--:-- --:--:-- 13.8M
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs.list at Wed May 28 13:48:26 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1274  100  1274    0     0   9954      0 --:--:-- --:--:-- --:--:-- 10031
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CCTV/CCTV.list at Wed May 28 13:48:26 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1019  100  1019    0     0  10688      0 --:--:-- --:--:-- --:--:-- 10726
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4638  100  4638    0     0  51675      0 --:--:-- --:--:-- --:--:-- 52112
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Huawei/Huawei.list at Wed May 28 13:48:26 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 13441  100 13441    0     0   118k      0 --:--:-- --:--:-- --:--:--  119k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4186  100  4186    0     0  39343      0 --:--:-- --:--:-- --:--:-- 39490
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1139  100  1139    0     0   9669      0 --:--:-- --:--:-- --:--:--  9652100  1139  100  1139    0     0   9660      0 --:--:-- --:--:-- --:--:--  9652
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1112  100  1112    0     0  13099      0 --:--:-- --:--:-- --:--:-- 13238
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Youku/Youku.list at Wed May 28 13:48:27 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2270  100  2270    0     0  23175      0 --:--:-- --:--:-- --:--:-- 23402
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1868  100  1868    0     0  16738      0 --:--:-- --:--:-- --:--:-- 16828
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   495  100   495    0     0   4021      0 --:--:-- --:--:-- --:--:--  4024
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Douyu/Douyu.list at Wed May 28 13:48:27 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   616  100   616    0     0   5772      0 --:--:-- --:--:-- --:--:--  5811
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Himalaya/Himalaya.list at Wed May 28 13:48:27 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 37206  100 37206    0     0   321k      0 --:--:-- --:--:-- --:--:--  321k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   421  100   421    0     0   3088      0 --:--:-- --:--:-- --:--:--  3095
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   543  100   543    0     0   5436      0 --:--:-- --:--:-- --:--:--  5484
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/12306/12306.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1631  100  1631    0     0  15686      0 --:--:-- --:--:-- --:--:-- 15834
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/17173/17173.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   689  100   689    0     0   6024      0 --:--:-- --:--:-- --:--:--  6043
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/178/178.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1034  100  1034    0     0   9551      0 --:--:-- --:--:-- --:--:--  9574
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/17zuoye/17zuoye.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   257  100   257    0     0   2823      0 --:--:-- --:--:-- --:--:--  2855
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/36kr/36kr.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   687  100   687    0     0   7570      0 --:--:-- --:--:-- --:--:--  7633
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/51Job/51Job.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   402  100   402    0     0   3248      0 --:--:-- --:--:-- --:--:--  3268
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/56/56.list at Wed May 28 13:48:28 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1782  100  1782    0     0  15671      0 --:--:-- --:--:-- --:--:-- 15769
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/58TongCheng/58TongCheng.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   311  100   311    0     0   3382      0 --:--:-- --:--:-- --:--:--  3417
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ABC/ABC.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   228    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   228  100   228    0     0   1868      0 --:--:-- --:--:-- --:--:--  1868
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Agora/Agora.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   749  100   749    0     0   6416      0 --:--:-- --:--:-- --:--:--  6456
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AliPay/AliPay.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   451  100   451    0     0   5095      0 --:--:-- --:--:-- --:--:--  5125
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AnTianKeJi/AnTianKeJi.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   339  100   339    0     0   3191      0 --:--:-- --:--:-- --:--:--  3198
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Anjuke/Anjuke.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   766  100   766    0     0   7350      0 --:--:-- --:--:-- --:--:--  7365
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BOC/BOC.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   324  100   324    0     0   3253      0 --:--:-- --:--:-- --:--:--  3272
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BOCOM/BOCOM.list at Wed May 28 13:48:29 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   434  100   434    0     0   4126      0 --:--:-- --:--:-- --:--:--  4133
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BaiFenDian/BaiFenDian.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   371  100   371    0     0   3879      0 --:--:-- --:--:-- --:--:--  3905
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BaoFengYingYin/BaoFengYingYin.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2920  100  2920    0     0  21197      0 --:--:-- --:--:-- --:--:-- 21159100  2920  100  2920    0     0  21180      0 --:--:-- --:--:-- --:--:-- 21159
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BianFeng/BianFeng.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   237  100   237    0     0   2182      0 --:--:-- --:--:-- --:--:--  2194
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bootcss/Bootcss.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1340  100  1340    0     0  12244      0 --:--:-- --:--:-- --:--:-- 12293
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CAS/CAS.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   638  100   638    0     0   6061      0 --:--:-- --:--:-- --:--:--  6076
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CCB/CCB.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   558  100   558    0     0   4603      0 --:--:-- --:--:-- --:--:--  4611
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CEB/CEB.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   257  100   257    0     0   2220      0 --:--:-- --:--:-- --:--:--  2234
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CGB/CGB.list at Wed May 28 13:48:30 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2163  100  2163    0     0  18375      0 --:--:-- --:--:-- --:--:-- 18487
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CIBN/CIBN.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   488  100   488    0     0   4155      0 --:--:-- --:--:-- --:--:--  4170
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CKJR/CKJR.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1167  100  1167    0     0  10939      0 --:--:-- --:--:-- --:--:-- 10906100  1167  100  1167    0     0  10927      0 --:--:-- --:--:-- --:--:-- 10906
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CMB/CMB.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   604  100   604    0     0   5999      0 --:--:-- --:--:-- --:--:--  6040
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CNKI/CNKI.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   972  100   972    0     0   7976      0 --:--:-- --:--:-- --:--:--  8033
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CNNIC/CNNIC.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   756  100   756    0     0   5701      0 --:--:-- --:--:-- --:--:--  5727
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CSDN/CSDN.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   250  100   250    0     0   2049      0 --:--:-- --:--:-- --:--:--  2066
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AcFun/AcFun.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   409  100   409    0     0   3439      0 --:--:-- --:--:-- --:--:--  3466
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CaiNiao/CaiNiao.list at Wed May 28 13:48:31 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   843  100   843    0     0   6712      0 --:--:-- --:--:-- --:--:--  6744
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CaiXinChuanMei/CaiXinChuanMei.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   367  100   367    0     0   3616      0 --:--:-- --:--:-- --:--:--  3633
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Camera360/Camera360.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1138  100  1138    0     0  11273      0 --:--:-- --:--:-- --:--:-- 11267
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMobile/ChinaMobile.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   264  100   264    0     0   2636      0 --:--:-- --:--:-- --:--:--  2640
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaNews/ChinaNews.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2335  100  2335    0     0  24036      0 --:--:-- --:--:-- --:--:-- 24072
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaTelecom/ChinaTelecom.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1114  100  1114    0     0   9604      0 --:--:-- --:--:-- --:--:--  9686
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaUnicom/ChinaUnicom.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   285  100   285    0     0   2734      0 --:--:-- --:--:-- --:--:--  2740
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChuangKeTie/ChuangKeTie.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1198  100  1198    0     0  11856      0 --:--:-- --:--:-- --:--:-- 11980
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChunYou/ChunYou.list at Wed May 28 13:48:32 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   436  100   436    0     0   4056      0 --:--:-- --:--:-- --:--:--  4074
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DaMai/DaMai.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   346  100   346    0     0   3035      0 --:--:-- --:--:-- --:--:--  3061
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DanDanZan/DanDanZan.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   244  100   244    0     0   2571      0 --:--:-- --:--:-- --:--:--  2568100   244  100   244    0     0   2568      0 --:--:-- --:--:-- --:--:--  2568
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Dandanplay/Dandanplay.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   207  100   207    0     0   2209      0 --:--:-- --:--:-- --:--:--  2225
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DangDang/DangDang.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   351  100   351    0     0   3654      0 --:--:-- --:--:-- --:--:--  3694
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Dedao/Dedao.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   335  100   335    0     0   3127      0 --:--:-- --:--:-- --:--:--  3130
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Deepin/Deepin.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   274  100   274    0     0   2936      0 --:--:-- --:--:-- --:--:--  2946
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DiSiFanShi/DiSiFanShi.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   352  100   352    0     0   3158      0 --:--:-- --:--:-- --:--:--  3171
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DianCeWangKe/DianCeWangKe.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   450  100   450    0     0   4255      0 --:--:-- --:--:-- --:--:--  4285
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DingTalk/DingTalk.list at Wed May 28 13:48:33 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   549  100   549    0     0   4831      0 --:--:-- --:--:-- --:--:--  4858
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DingXiangYuan/DingXiangYuan.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   813  100   813    0     0   8018      0 --:--:-- --:--:-- --:--:--  8049
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Domob/Domob.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   1862      0 --:--:-- --:--:-- --:--:--  1862100   231  100   231    0     0   1860      0 --:--:-- --:--:-- --:--:--  1848
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DouBan/DouBan.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1053  100  1053    0     0  12365      0 --:--:-- --:--:-- --:--:-- 12388
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/EastMoney/EastMoney.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   500  100   500    0     0   5781      0 --:--:-- --:--:-- --:--:--  5813
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Eleme/Eleme.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   250  100   250    0     0   2493      0 --:--:-- --:--:-- --:--:--  2500
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/FanFou/FanFou.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   655  100   655    0     0   6194      0 --:--:-- --:--:-- --:--:--  6238
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/FeiZhu/FeiZhu.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   415  100   415    0     0   4574      0 --:--:-- --:--:-- --:--:--  4611
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/FengHuangWang/FengHuangWang.list at Wed May 28 13:48:34 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   358  100   358    0     0   3899      0 --:--:-- --:--:-- --:--:--  3934
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/FengXiaWangLuo/FengXiaWangLuo.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   247  100   247    0     0   2379      0 --:--:-- --:--:-- --:--:--  2398
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Fiio/Fiio.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   421  100   421    0     0   3504      0 --:--:-- --:--:-- --:--:--  3508
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Funshion/Funshion.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   643  100   643    0     0   5696      0 --:--:-- --:--:-- --:--:--  5690
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/6JianFang/6JianFang.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   373  100   373    0     0   3496      0 --:--:-- --:--:-- --:--:--  3518
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GaoDe/GaoDe.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   445  100   445    0     0   4401      0 --:--:-- --:--:-- --:--:--  4405
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GuiGuDongLi/GuiGuDongLi.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   338  100   338    0     0   3566      0 --:--:-- --:--:-- --:--:--  3595
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HaiNanHangKong/HaiNanHangKong.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   456  100   456    0     0   5022      0 --:--:-- --:--:-- --:--:--  5066
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   468  100   468    0     0   4806      0 --:--:-- --:--:-- --:--:--  4824
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HeMa/HeMa.list at Wed May 28 13:48:35 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   2332      0 --:--:-- --:--:-- --:--:--  2357
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HibyMusic/HibyMusic.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   256  100   256    0     0   2410      0 --:--:-- --:--:-- --:--:--  2415
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HuYa/HuYa.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   299  100   299    0     0   2585      0 --:--:-- --:--:-- --:--:--  2577100   299  100   299    0     0   2583      0 --:--:-- --:--:-- --:--:--  2577
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HuaShuTV/HuaShuTV.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   701  100   701    0     0   5614      0 --:--:-- --:--:-- --:--:--  5653
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HuanJu/HuanJu.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   328  100   328    0     0   3117      0 --:--:-- --:--:-- --:--:--  3123
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HunanTV/HunanTV.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   468  100   468    0     0   5073      0 --:--:-- --:--:-- --:--:--  5086
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Hupu/Hupu.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1701  100  1701    0     0  10989      0 --:--:-- --:--:-- --:--:-- 11045
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ICBC/ICBC.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   595  100   595    0     0   4072      0 --:--:-- --:--:-- --:--:--  4075
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/JiGuangTuiSong/JiGuangTuiSong.list at Wed May 28 13:48:36 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   299  100   299    0     0   2699      0 --:--:-- --:--:-- --:--:--  2718
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/JianGuoYun/JianGuoYun.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   291  100   291    0     0   2705      0 --:--:-- --:--:-- --:--:--  2719
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/JianShu/JianShu.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   382  100   382    0     0   2950      0 --:--:-- --:--:-- --:--:--  2938100   382  100   382    0     0   2948      0 --:--:-- --:--:-- --:--:--  2938
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  7218  100  7218    0     0  64909      0 --:--:-- --:--:-- --:--:-- 65027
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/JingDong/JingDong.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   576  100   576    0     0   4498      0 --:--:-- --:--:-- --:--:--  4535
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/JueJin/JueJin.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   285  100   285    0     0   2511      0 --:--:-- --:--:-- --:--:--  2522
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Keep/Keep.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   273  100   273    0     0   2901      0 --:--:-- --:--:-- --:--:--  2935
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KingSmith/KingSmith.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6857  100  6857    0     0  71443      0 --:--:-- --:--:-- --:--:-- 72178
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Kingsoft/Kingsoft.list at Wed May 28 13:48:37 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   734  100   734    0     0   8368      0 --:--:-- --:--:-- --:--:--  8436
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KouDaiShiShang/KouDaiShiShang.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   424  100   424    0     0   3763      0 --:--:-- --:--:-- --:--:--  3785
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Ku6/Ku6.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   2357      0 --:--:-- --:--:-- --:--:--  2357100   231  100   231    0     0   2354      0 --:--:-- --:--:-- --:--:--  2333
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KuKeMusic/KuKeMusic.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   313  100   313    0     0   3220      0 --:--:-- --:--:-- --:--:--  3226
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KuaiDi100/KuaiDi100.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 19307  100 19307    0     0   189k      0 --:--:-- --:--:-- --:--:--  190k
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KuaiShou/KuaiShou.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   911  100   911    0     0   7295      0 --:--:-- --:--:-- --:--:--  7346
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KuangShi/KuangShi.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  3781  100  3781    0     0  35981      0 --:--:-- --:--:-- --:--:-- 36009
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/KugouKuwo/KugouKuwo.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1092  100  1092    0     0  11031      0 --:--:-- --:--:-- --:--:-- 11142
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LanZouYun/LanZouYun.list at Wed May 28 13:48:38 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   662  100   662    0     0   6636      0 --:--:-- --:--:-- --:--:--  6686
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LeJu/LeJu.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   491  100   491    0     0   4631      0 --:--:-- --:--:-- --:--:--  4676
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LeTV/LeTV.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1003  100  1003    0     0   8250      0 --:--:-- --:--:-- --:--:--  8289
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lenovo/Lenovo.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   629  100   629    0     0   6272      0 --:--:-- --:--:-- --:--:--  6290
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LuDaShi/LuDaShi.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   326  100   326    0     0   2558      0 --:--:-- --:--:-- --:--:--  2566
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LvMiLianChuang/LvMiLianChuang.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   241  100   241    0     0   2701      0 --:--:-- --:--:-- --:--:--  2707
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Maocloud/Maocloud.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   334  100   334    0     0   2578      0 --:--:-- --:--:-- --:--:--  2589
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MeiTuan/MeiTuan.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   528  100   528    0     0   4918      0 --:--:-- --:--:-- --:--:--  4934
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MeiZu/MeiZu.list at Wed May 28 13:48:39 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   224  100   224    0     0   2148      0 --:--:-- --:--:-- --:--:--  2153
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MiWu/MiWu.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   228  100   228    0     0   1903      0 --:--:-- --:--:-- --:--:--  1915
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Migu/Migu.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   632  100   632    0     0   6321      0 --:--:-- --:--:-- --:--:--  6383
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/MingLueZhaoHui/MingLueZhaoHui.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   421  100   421    0     0   4257      0 --:--:-- --:--:-- --:--:--  4252
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Mogujie/Mogujie.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   339  100   339    0     0   2292      0 --:--:-- --:--:-- --:--:--  2306
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Mojitianqi/Mojitianqi.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   913  100   913    0     0  10073      0 --:--:-- --:--:-- --:--:-- 10144
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NGAA/NGAA.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1660  100  1660    0     0  16636      0 --:--:-- --:--:-- --:--:-- 16767
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OPPO/OPPO.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   345  100   345    0     0   2322      0 --:--:-- --:--:-- --:--:--  2331
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OnePlus/OnePlus.list at Wed May 28 13:48:40 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   389  100   389    0     0   4025      0 --:--:-- --:--:-- --:--:--  4052
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OuPeng/OuPeng.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   630  100   630    0     0   5462      0 --:--:-- --:--:-- --:--:--  5478
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PPTV/PPTV.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   228  100   228    0     0   2009      0 --:--:-- --:--:-- --:--:--  2017
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PSBC/PSBC.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   894  100   894    0     0   8641      0 --:--:-- --:--:-- --:--:--  8679
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PingAn/PingAn.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1547  100  1547    0     0  14200      0 --:--:-- --:--:-- --:--:-- 14324
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/QiNiuYun/QiNiuYun.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   500  100   500    0     0   4628      0 --:--:-- --:--:-- --:--:--  4672
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/QingCloud/QingCloud.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   729  100   729    0     0   7101      0 --:--:-- --:--:-- --:--:--  7147
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RuanMei/RuanMei.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   686  100   686    0     0   6061      0 --:--:-- --:--:-- --:--:--  6070
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SFExpress/SFExpress.list at Wed May 28 13:48:41 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   395  100   395    0     0   2849      0 --:--:-- --:--:-- --:--:--  2862
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SMZDM/SMZDM.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   291  100   291    0     0   2038      0 --:--:-- --:--:-- --:--:--  2049
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ShangHaiJuXiao/ShangHaiJuXiao.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   212  100   212    0     0   2031      0 --:--:-- --:--:-- --:--:--  2019100   212  100   212    0     0   2029      0 --:--:-- --:--:-- --:--:--  2019
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Shanling/Shanling.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   506  100   506    0     0   5182      0 --:--:-- --:--:-- --:--:--  5216
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ShenMa/ShenMa.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   247  100   247    0     0   2397      0 --:--:-- --:--:-- --:--:--  2421
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ShiNongZhiKe/ShiNongZhiKe.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1476  100  1476    0     0  12215      0 --:--:-- --:--:-- --:--:-- 12300
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Sohu/Sohu.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   425  100   425    0     0   4077      0 --:--:-- --:--:-- --:--:--  4086
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SouFang/SouFang.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1017  100  1017    0     0   9006      0 --:--:-- --:--:-- --:--:--  9080
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SuNing/SuNing.list at Wed May 28 13:48:42 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   534  100   534    0     0   4520      0 --:--:-- --:--:-- --:--:--  4525
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SuiShiChuanMei/SuiShiChuanMei.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   341  100   341    0     0   2799      0 --:--:-- --:--:-- --:--:--  2818
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TCL/TCL.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1271  100  1271    0     0  11841      0 --:--:-- --:--:-- --:--:-- 11768100  1271  100  1271    0     0  11829      0 --:--:-- --:--:-- --:--:-- 11768
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TaiKang/TaiKang.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   365  100   365    0     0   1811      0 --:--:-- --:--:-- --:--:--  1815
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TaiheMusic/TaiheMusic.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   424  100   424    0     0   3263      0 --:--:-- --:--:-- --:--:--  3286
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Teambition/Teambition.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   271  100   271    0     0   2257      0 --:--:-- --:--:-- --:--:--  2277
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TianTianKanKan/TianTianKanKan.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   766  100   766    0     0   6800      0 --:--:-- --:--:-- --:--:--  6839
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TianWeiChengXin/TianWeiChengXin.list at Wed May 28 13:48:43 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   507  100   507    0     0   5467      0 --:--:-- --:--:-- --:--:--  5510
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TianYaForum/TianYaForum.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   384  100   384    0     0   2717      0 --:--:-- --:--:-- --:--:--  2723
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TigerFintech/TigerFintech.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   351  100   351    0     0   2917      0 --:--:-- --:--:-- --:--:--  2900100   351  100   351    0     0   2914      0 --:--:-- --:--:-- --:--:--  2900
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TongCheng/TongCheng.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   220  100   220    0     0   1922      0 --:--:-- --:--:-- --:--:--  1929
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/U17/U17.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1112  100  1112    0     0   8832      0 --:--:-- --:--:-- --:--:--  8896
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/UC/UC.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1122  100  1122    0     0   7871      0 --:--:-- --:--:-- --:--:--  7901
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/UCloud/UCloud.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   563  100   563    0     0   4010      0 --:--:-- --:--:-- --:--:--  4021
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/UPYun/UPYun.list at Wed May 28 13:48:44 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   616  100   616    0     0   5444      0 --:--:-- --:--:-- --:--:--  5451
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/UnionPay/UnionPay.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   229  100   229    0     0   2244      0 --:--:-- --:--:-- --:--:--  2267
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Vancl/Vancl.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   506  100   506    0     0   3639      0 --:--:-- --:--:-- --:--:--  3640100   506  100   506    0     0   3636      0 --:--:-- --:--:-- --:--:--  3614
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Vivo/Vivo.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   470  100   470    0     0   3923      0 --:--:-- --:--:-- --:--:--  3949
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WanMeiShiJie/WanMeiShiJie.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  5084  100  5084    0     0  49316      0 --:--:-- --:--:-- --:--:-- 49359
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WangSuKeJi/WangSuKeJi.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   875  100   875    0     0   9589      0 --:--:-- --:--:-- --:--:--  9615
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WangXinKeJi/WangXinKeJi.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   250  100   250    0     0   2636      0 --:--:-- --:--:-- --:--:--  2659
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WenJuanXing/WenJuanXing.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1827  100  1827    0     0  15977      0 --:--:-- --:--:-- --:--:-- 16026
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WiFiMaster/WiFiMaster.list at Wed May 28 13:48:45 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   230  100   230    0     0   1799      0 --:--:-- --:--:-- --:--:--  1811
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XiamiMusic/XiamiMusic.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   562  100   562    0     0   5314      0 --:--:-- --:--:-- --:--:--  5352
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XianYu/XianYu.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   641  100   641    0     0   4891      0 --:--:-- --:--:-- --:--:--  4930
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XiaoGouKeJi/XiaoGouKeJi.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   295  100   295    0     0   2340      0 --:--:-- --:--:-- --:--:--  2360
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XiaoYuanKeJi/XiaoYuanKeJi.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   904  100   904    0     0   9190      0 --:--:-- --:--:-- --:--:--  9224
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XieCheng/XieCheng.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   233  100   233    0     0   1909      0 --:--:-- --:--:-- --:--:--  1925
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XueErSi/XueErSi.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   467  100   467    0     0   4127      0 --:--:-- --:--:-- --:--:--  4132
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XueQiu/XueQiu.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   685  100   685    0     0   6704      0 --:--:-- --:--:-- --:--:--  6715
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YYeTs/YYeTs.list at Wed May 28 13:48:46 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   284  100   284    0     0   2630      0 --:--:-- --:--:-- --:--:--  2654
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YiChe/YiChe.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   526  100   526    0     0   4269      0 --:--:-- --:--:-- --:--:--  4276
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YiXiaKeJi/YiXiaKeJi.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   284  100   284    0     0   2801      0 --:--:-- --:--:-- --:--:--  2811
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YiZhiBo/YiZhiBo.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   718  100   718    0     0   6872      0 --:--:-- --:--:-- --:--:--  6903
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouMengChuangXiang/YouMengChuangXiang.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   2501      0 --:--:-- --:--:-- --:--:--  2510
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouZan/YouZan.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2554  100  2554    0     0  21742      0 --:--:-- --:--:-- --:--:-- 21829
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YuanFuDao/YuanFuDao.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   997  100   997    0     0  10471      0 --:--:-- --:--:-- --:--:-- 10494
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YunFanJiaSu/YunFanJiaSu.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   489  100   489    0     0   5689      0 --:--:-- --:--:-- --:--:--  5752
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZDNS/ZDNS.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   866  100   866    0     0   7822      0 --:--:-- --:--:-- --:--:--  7872
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhangYue/ZhangYue.list at Wed May 28 13:48:47 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   365  100   365    0     0   2952      0 --:--:-- --:--:-- --:--:--  2967
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhiYunZhong/ZhiYunZhong.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   314  100   314    0     0   3467      0 --:--:-- --:--:-- --:--:--  3488
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhongGuoShiHua/ZhongGuoShiHua.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   622    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   622  100   622    0     0   4572      0 --:--:-- --:--:-- --:--:--  4573
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhongWeiShiJi/ZhongWeiShiJi.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   407  100   407    0     0   3918      0 --:--:-- --:--:-- --:--:--  3951
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhongYuanYiShang/ZhongYuanYiShang.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   275  100   275    0     0   2534      0 --:--:-- --:--:-- --:--:--  2546
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhuanZhuan/ZhuanZhuan.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   295  100   295    0     0   3037      0 --:--:-- --:--:-- --:--:--  3041
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Hpplay/Hpplay.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4252  100  4252    0     0  36118      0 --:--:-- --:--:-- --:--:-- 36341
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iFlytek/iFlytek.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1078  100  1078    0     0  10379      0 --:--:-- --:--:-- --:--:-- 10466
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ifanr/ifanr.list at Wed May 28 13:48:48 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1776  100  1776    0     0  14995      0 --:--:-- --:--:-- --:--:-- 15050
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BaiShanYunKeJi/BaiShanYunKeJi.list at Wed May 28 13:48:49 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   513  100   513    0     0   5472      0 --:--:-- --:--:-- --:--:--  5516
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DiLianWangLuo/DiLianWangLuo.list at Wed May 28 13:48:49 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   498  100   498    0     0   4460      0 --:--:-- --:--:-- --:--:--  4446100   498  100   498    0     0   4456      0 --:--:-- --:--:-- --:--:--  4446
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LianMeng/LianMeng.list at Wed May 28 13:48:49 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   312  100   312    0     0   3379      0 --:--:-- --:--:-- --:--:--  3391
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   282  100   282    0     0   2761      0 --:--:-- --:--:-- --:--:--  2764
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/8btc/8btc.list at Wed May 28 13:48:49 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  140k  100  140k    0     0  1214k      0 --:--:-- --:--:-- --:--:-- 1220k
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP.list at Wed May 28 13:48:49 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   262  100   262    0     0   2696      0 --:--:-- --:--:-- --:--:--  2701
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChengTongWangPan/ChengTongWangPan.list at Wed May 28 13:48:49 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3905k  100 3905k    0     0  22.9M      0 --:--:-- --:--:-- --:--:-- 22.9M
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   880  100   880    0     0   7573      0 --:--:-- --:--:-- --:--:--  7586
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/DuoWan/DuoWan.list at Wed May 28 13:48:50 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   960  100   960    0     0   8643      0 --:--:-- --:--:-- --:--:--  8727
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WanKaHuanJu/WanKaHuanJu.list at Wed May 28 13:48:50 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   641  100   641    0     0   5482      0 --:--:-- --:--:-- --:--:--  5478100   641  100   641    0     0   5477      0 --:--:-- --:--:-- --:--:--  5478
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhiYinManKe/ZhiYinManKe.list at Wed May 28 13:48:50 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 97409  100 97409    0     0   935k      0 --:--:-- --:--:-- --:--:--  941k
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1023  100  1023    0     0   9631      0 --:--:-- --:--:-- --:--:--  9650
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1023  100  1023    0     0  26154      0 --:--:-- --:--:-- --:--:-- 26230
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1055  100  1055    0     0  11964      0 --:--:-- --:--:-- --:--:-- 11988
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ShiJiChaoXing/ShiJiChaoXing.list at Wed May 28 13:48:50 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    14  100    14    0     0    124      0 --:--:-- --:--:-- --:--:--   125
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   352  100   352    0     0   2926      0 --:--:-- --:--:-- --:--:--  2933
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   274  100   274    0     0   2408      0 --:--:-- --:--:-- --:--:--  2424
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WoLai/WoLai.list at Wed May 28 13:48:51 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   438  100   438    0     0   3799      0 --:--:-- --:--:-- --:--:--  3808
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Zhihu/Zhihu.list at Wed May 28 13:48:51 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   236  100   236    0     0   2336      0 --:--:-- --:--:-- --:--:--  2336
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NGA/NGA.list at Wed May 28 13:48:51 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   533  100   533    0     0   4360      0 --:--:-- --:--:-- --:--:--  4368
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   272  100   272    0     0   2287      0 --:--:-- --:--:-- --:--:--  2305
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XiaoHongShu/XiaoHongShu.list at Wed May 28 13:48:51 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   573  100   573    0     0   5648      0 --:--:-- --:--:-- --:--:--  5673
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GovCN/GovCN.list at Wed May 28 13:48:51 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    14  100    14    0     0    148      0 --:--:-- --:--:-- --:--:--   148
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1795  100  1795    0     0  13500      0 --:--:-- --:--:-- --:--:-- 13598
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Marketing/Marketing.list at Wed May 28 13:48:52 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   200  100   200    0     0   1759      0 --:--:-- --:--:-- --:--:--  1769
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TapTap/TapTap.list at Wed May 28 13:48:52 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   694  100   694    0     0   5193      0 --:--:-- --:--:-- --:--:--  5218
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ZhongXingTongXun/ZhongXingTongXun.list at Wed May 28 13:48:52 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1596  100  1596    0     0  14262      0 --:--:-- --:--:-- --:--:-- 14250
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Geely/Geely.list at Wed May 28 13:48:52 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3108k  100 3108k    0     0  18.3M      0 --:--:-- --:--:-- --:--:-- 18.3M
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   998  100   998    0     0  10039      0 --:--:-- --:--:-- --:--:-- 10080
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   701  100   701    0     0   7147      0 --:--:-- --:--:-- --:--:--  7226
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/FangZhengDianZi/FangZhengDianZi.list at Wed May 28 13:48:52 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   231  100   231    0     0   2056      0 --:--:-- --:--:-- --:--:--  2062
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BeStore/BeStore.list at Wed May 28 13:48:52 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3892k  100 3892k    0     0  20.3M      0 --:--:-- --:--:-- --:--:-- 20.4M
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   179  100   179    0     0   1301      0 --:--:-- --:--:-- --:--:--  1306
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/zhanqi/zhanqi.list at Wed May 28 13:48:53 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   182  100   182    0     0   1514      0 --:--:-- --:--:-- --:--:--  1516
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Wteam/Wteam.list at Wed May 28 13:48:53 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   201  100   201    0     0   2133      0 --:--:-- --:--:-- --:--:--  2138
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gitee/Gitee.list at Wed May 28 13:48:53 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   210  100   210    0     0   2102      0 --:--:-- --:--:-- --:--:--  2121
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Wanfang/Wanfang.list at Wed May 28 13:48:53 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   186  100   186    0     0   1738      0 --:--:-- --:--:-- --:--:--  1754
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/W3schools/W3schools.list at Wed May 28 13:48:53 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   420  100   420    0     0   4484      0 --:--:-- --:--:-- --:--:--  4516
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Picacg/Picacg.list at Wed May 28 13:48:53 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   662  100   662    0     0   5339      0 --:--:-- --:--:-- --:--:--  5382
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/XingKongWuXian/XingKongWuXian.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   177  100   177    0     0   1669      0 --:--:-- --:--:-- --:--:--  1685
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Qyyjt/Qyyjt.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   246  100   246    0     0   2109      0 --:--:-- --:--:-- --:--:--  2120
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Coolapk/Coolapk.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0   1578      0 --:--:-- --:--:-- --:--:--  1575
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/3dm/3dm.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   177  100   177    0     0   1648      0 --:--:-- --:--:-- --:--:--  1654
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/3Type/3Type.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   186  100   186    0     0   1279      0 --:--:-- --:--:-- --:--:--  1282
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/4Paradigm/4Paradigm.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   336  100   336    0     0   3412      0 --:--:-- --:--:-- --:--:--  3428
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BesTV/BesTV.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   225  100   225    0     0   2228      0 --:--:-- --:--:-- --:--:--  2250
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CETV/CETV.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   244  100   244    0     0   2713      0 --:--:-- --:--:-- --:--:--  2741
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SMG/SMG.list at Wed May 28 13:48:54 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   188  100   188    0     0   1697      0 --:--:-- --:--:-- --:--:--  1709
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AiQiCha/AiQiCha.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   219  100   219    0     0   2148      0 --:--:-- --:--:-- --:--:--  2168
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AirChina/AirChina.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   210  100   210    0     0   2014      0 --:--:-- --:--:-- --:--:--  2000100   210  100   210    0     0   2012      0 --:--:-- --:--:-- --:--:--  2000
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/aiXcoder/aiXcoder.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   180  100   180    0     0   1783      0 --:--:-- --:--:-- --:--:--  1800
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Ali213/Ali213.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   180  100   180    0     0   1973      0 --:--:-- --:--:-- --:--:--  1978
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Antutu/Antutu.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   204  100   204    0     0   2045      0 --:--:-- --:--:-- --:--:--  2060
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apifox/Apifox.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1590  100  1590    0     0  14555      0 --:--:-- --:--:-- --:--:-- 14587
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AmazonCN/AmazonCN.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0   1792      0 --:--:-- --:--:-- --:--:--  1797
-Failed to process https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Stripe/Stripe.list at Wed May 28 13:48:55 UTC 2025
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 4314k  100 4314k    0     0  50.8M      0 --:--:-- --:--:-- --:--:-- 51.3M
+2025-05-28T14:34:56Z - No download failures in this run.
