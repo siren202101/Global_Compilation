@@ -1,199 +1,55 @@
-name: Update Global Domain List
+name: Build Global List
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *' # Runs daily at 1 AM UTC
+    - cron: '0 2 * * *' # 每天北京时间10点运行
 
 jobs:
-  update_global_list_job:
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      outcome: ${{ steps.commit_and_push.outputs.outcome }}
     steps:
-      - name: Checkout repository 🛎️
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GG_TOKEN }} # Token for pushing changes
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Create directories 📂
+      - name: Set up directories
         run: |
-          mkdir -p output
-          mkdir -p logs
-          # Initialize/clear the log file for this run
-          > logs/Global_failed_downloads.log
+          mkdir -p temp output logs
 
-      - name: 1. Download and process Exclusion List (cn_urls.txt) for Req 7 🚫
-        id: process_exclusion_list
+      - name: Download and process Global_Compilation.txtt
         run: |
-          EXCLUSION_MAIN_URL="https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt"
-          EXCLUSION_MAIN_CONTENT_FILE="exclusion_cn_urls_main_content.txt"
-          EXCLUSION_RAW_ACCUMULATED="exclusion_raw_accumulated_content.txt"
-          EXCLUSION_DOMAINS_FILE="exclusion_domains.txt" # Final output of this step
-
-          echo "Processing Exclusion List: $EXCLUSION_MAIN_URL"
-          true > "$EXCLUSION_RAW_ACCUMULATED" # Ensure file is empty or created
-
-          if ! curl -fSsL "$EXCLUSION_MAIN_URL" -o "$EXCLUSION_MAIN_CONTENT_FILE"; then
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download Exclusion Main List: $EXCLUSION_MAIN_URL" >> logs/Global_failed_downloads.log
-          else
-            # Extract direct entries (not comments, not *.list filenames)
-            grep -vE '^[a-zA-Z0-9_./-]+\.list$|^#' "$EXCLUSION_MAIN_CONTENT_FILE" >> "$EXCLUSION_RAW_ACCUMULATED" 2>/dev/null || true
-            # Extract *.list filenames
-            grep -E '^[a-zA-Z0-9_./-]+\.list$' "$EXCLUSION_MAIN_CONTENT_FILE" > referenced_exclusion_files.txt 2>/dev/null || true
-
-            EXCLUSION_BASE_URL_FOR_SUB_LISTS="https://raw.githubusercontent.com/siren202101/Global_Compilation/main/"
-            while IFS= read -r list_file_name || [ -n "$list_file_name" ]; do
-              if [ -z "$list_file_name" ]; then continue; fi
-              list_file_name=$(echo "$list_file_name" | tr -d '\r')
-              SUB_LIST_URL="${EXCLUSION_BASE_URL_FOR_SUB_LISTS}${list_file_name}"
-              echo "Downloading referenced exclusion sub-list: $SUB_LIST_URL"
-              TEMP_SUB_LIST_CONTENT="temp_exclusion_sub_list.txt"
-              if curl -fSsL "$SUB_LIST_URL" -o "$TEMP_SUB_LIST_CONTENT"; then
-                cat "$TEMP_SUB_LIST_CONTENT" >> "$EXCLUSION_RAW_ACCUMULATED"
-                rm -f "$TEMP_SUB_LIST_CONTENT"
-              else
-                echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download referenced exclusion sub-list $SUB_LIST_URL" >> logs/Global_failed_downloads.log
-              fi
-            done < referenced_exclusion_files.txt
-
-            echo "Filtering accumulated exclusion content..."
-            # Apply similar filtering as Req 1 to get clean domains/rules for exclusion
-            grep -vE '^#|^DOMAIN-|^IP-' "$EXCLUSION_RAW_ACCUMULATED" | sort -u > "$EXCLUSION_DOMAINS_FILE"
-            echo "Exclusion list processed into $EXCLUSION_DOMAINS_FILE"
-          fi
-          rm -f "$EXCLUSION_MAIN_CONTENT_FILE" referenced_exclusion_files.txt "$EXCLUSION_RAW_ACCUMULATED"
-          # Ensure exclusion_domains.txt exists, even if empty
-          if [ ! -f "$EXCLUSION_DOMAINS_FILE" ]; then
-            echo "Warning: $EXCLUSION_DOMAINS_FILE was not created (e.g., initial download failed or no content). Creating empty exclusion file."
-            > "$EXCLUSION_DOMAINS_FILE"
-          fi
-
-      - name: 2. Download and process Source 1 (Global_Compilation.txt) 🌏
-        id: process_source_1
-        run: |
-          SOURCE1_MAIN_URL="https://raw.githubusercontent.com/siren202101/Global_Compilation/main/Global_Compilation.txt" # Corrected txtt typo
-          SOURCE1_MAIN_CONTENT_FILE="source1_main_content.txt"
-          SOURCE1_RAW_ACCUMULATED="source1_raw_accumulated_content.txt"
-          FILE1_PROCESSED="file1_processed.txt" # Final output of this step
-
-          echo "Processing Source 1: $SOURCE1_MAIN_URL"
-          true > "$SOURCE1_RAW_ACCUMULATED"
-
-          if ! curl -fSsL "$SOURCE1_MAIN_URL" -o "$SOURCE1_MAIN_CONTENT_FILE"; then
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download Source 1 Main List: $SOURCE1_MAIN_URL" >> logs/Global_failed_downloads.log
-          else
-            grep -vE '^[a-zA-Z0-9_./-]+\.list$|^#' "$SOURCE1_MAIN_CONTENT_FILE" >> "$SOURCE1_RAW_ACCUMULATED" 2>/dev/null || true
-            grep -E '^[a-zA-Z0-9_./-]+\.list$' "$SOURCE1_MAIN_CONTENT_FILE" > referenced_source1_files.txt 2>/dev/null || true
-
-            SOURCE1_BASE_URL_FOR_SUB_LISTS="https://raw.githubusercontent.com/siren202101/Global_Compilation/main/"
-            while IFS= read -r list_file_name || [ -n "$list_file_name" ]; do
-              if [ -z "$list_file_name" ]; then continue; fi
-              list_file_name=$(echo "$list_file_name" | tr -d '\r')
-              SUB_LIST_URL="${SOURCE1_BASE_URL_FOR_SUB_LISTS}${list_file_name}"
-              echo "Downloading referenced Source 1 sub-list: $SUB_LIST_URL"
-              TEMP_SUB_LIST_CONTENT="temp_source1_sub_list.txt"
-              if curl -fSsL "$SUB_LIST_URL" -o "$TEMP_SUB_LIST_CONTENT"; then
-                cat "$TEMP_SUB_LIST_CONTENT" >> "$SOURCE1_RAW_ACCUMULATED"
-                rm -f "$TEMP_SUB_LIST_CONTENT"
-              else
-                echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download referenced Source 1 sub-list $SUB_LIST_URL" >> logs/Global_failed_downloads.log
-              fi
-            done < referenced_source1_files.txt
-
-            echo "Applying Req 1 filters to accumulated Source 1 content..."
-            # Req 1 filters: (1) remove #, (2) remove DOMAIN-, (3) remove IP-
-            grep -vE '^#|^DOMAIN-|^IP-' "$SOURCE1_RAW_ACCUMULATED" > "$FILE1_PROCESSED"
-            echo "Source 1 processed into $FILE1_PROCESSED"
-          fi
-          rm -f "$SOURCE1_MAIN_CONTENT_FILE" referenced_source1_files.txt "$SOURCE1_RAW_ACCUMULATED"
-          if [ ! -f "$FILE1_PROCESSED" ]; then
-            echo "Warning: $FILE1_PROCESSED was not created. Creating empty file."
-            > "$FILE1_PROCESSED"
-          fi
-
-      - name: 3. Download and process Source 2 (gfw.txt) 🧱
-        id: process_source_2
-        run: |
-          SOURCE2_URL="https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt"
-          SOURCE2_RAW_FILE="source2_raw.txt"
-          FILE2_PROCESSED="file2_processed.txt" # Final output of this step
-
-          echo "Processing Source 2: $SOURCE2_URL"
-          if ! curl -fSsL "$SOURCE2_URL" -o "$SOURCE2_RAW_FILE"; then
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download Source 2: $SOURCE2_URL" >> logs/Global_failed_downloads.log
-          else
-            echo "Applying Req 2 filters to Source 2 content..."
-            # Req 2 filters: (1) remove server=/, (2) remove /114.114.114.114
-            # Note: These sed rules may not be effective if gfw.txt format doesn't contain these strings.
-            sed 's|server=/||g; s|/114\.114\.114\.114||g' "$SOURCE2_RAW_FILE" > "$FILE2_PROCESSED"
-            echo "Source 2 processed into $FILE2_PROCESSED"
-          fi
-          rm -f "$SOURCE2_RAW_FILE"
-          if [ ! -f "$FILE2_PROCESSED" ]; then
-            echo "Warning: $FILE2_PROCESSED was not created. Creating empty file."
-            > "$FILE2_PROCESSED"
-          fi
-
-      - name: 4. Merge Sources 1 and 2 ➕
-        run: |
-          echo "Merging processed Source 1 and Source 2..."
-          cat file1_processed.txt file2_processed.txt > merged_sources_temp.txt
-          echo "Sources merged into merged_sources_temp.txt"
-
-      - name: 5. Apply Exclusion List (Req 7) from cn_urls.txt ➖
-        run: |
-          if [ -s exclusion_domains.txt ]; then # Check if exclusion file is not empty and exists
-            echo "Applying exclusion list (Req 7)..."
-            grep -v -F -x -f exclusion_domains.txt merged_sources_temp.txt > list_after_exclusion_temp.txt
-          else
-            echo "Exclusion list (exclusion_domains.txt) is empty or not found, skipping exclusion step."
-            cp merged_sources_temp.txt list_after_exclusion_temp.txt
-          fi
-          echo "Exclusion list applied, result in list_after_exclusion_temp.txt"
-
-      - name: 6. Final Processing and Output (Req 3, 4, and global '#' removal) ✨
-        run: |
-          echo "Applying final global filter for lines starting with '#'..."
-          grep -vE '^#' list_after_exclusion_temp.txt > final_list_temp.txt
+          curl -sfL https://raw.githubusercontent.com/siren202101/Global_Compilation/main/Global_Compilation.txtt -o temp/global.txt || echo "https://raw.githubusercontent.com/siren202101/Global_Compilation/main/Global_Compilation.txtt" >> logs/Global_failed_downloads.log
           
-          echo "Sorting, deduplicating (Req 3), and removing empty/blank lines..."
-          sort -u final_list_temp.txt | sed '/^[[:space:]]*$/d' > output/Global_List.conf # Req 4: Output filename
-          
-          echo "Final list generated: output/Global_List.conf"
-          rm -f file1_processed.txt file2_processed.txt exclusion_domains.txt \
-                 merged_sources_temp.txt list_after_exclusion_temp.txt final_list_temp.txt
+          grep -vE '^(#|DOMAIN-|IP-)' temp/global.txt > temp/cleaned_global.txt || true
 
-      - name: 7. Update Download Log Status (Req 5) 📝
+      - name: Download and process gfw.txt
         run: |
-          # Req 5: Log filename is Global_failed_downloads.log
-          if [ ! -s logs/Global_failed_downloads.log ]; then
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - No download failures recorded in this run." > logs/Global_failed_downloads.log
-          fi
+          curl -sfL https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt -o temp/gfw.txt || echo "https://fastly.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/gfw.txt" >> logs/Global_failed_downloads.log
 
-      - name: 8. Commit and Push Changes (Req 6) 🚀
-        id: commit_and_push # Added id for potential output usage
+          sed -e 's/server=//' -e 's/\/114\.114\.114\.114//' temp/gfw.txt | grep -v '^$' > temp/cleaned_gfw.txt || true
+
+      - name: Download cn_urls.txt exclusion list
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          curl -sfL https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt -o temp/cn_urls.txt || echo "https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt" >> logs/Global_failed_downloads.log
+
+      - name: Merge and filter final list
+        run: |
+          cat temp/cleaned_global.txt temp/cleaned_gfw.txt > temp/merged.txt
           
-          # Req 6: Ensure Global_List.conf and Global_failed_downloads.log are updated
-          git add output/Global_List.conf
-          git add logs/Global_failed_downloads.log
-          
-          if ! git diff --staged --quiet; then
-            COMMIT_MSG="Update Global_List.conf and download logs - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-            echo "Changes detected. Committing with message: $COMMIT_MSG"
-            git commit -m "$COMMIT_MSG"
-            echo "outcome=committed" >> $GITHUB_OUTPUT
-          else
-            COMMIT_MSG="Scheduled list update check (no content changes) - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-            echo "No content changes detected. Creating an empty commit as per Req 6 with message: $COMMIT_MSG"
-            git commit --allow-empty -m "$COMMIT_MSG"
-            echo "outcome=committed_empty" >> $GITHUB_OUTPUT
-          fi
-          
-          echo "Pushing changes to repository."
-          git push
+          # 过滤 cn_urls.txt 中的域名
+          grep -vFf temp/cn_urls.txt temp/merged.txt | sort -u > output/Global_List.conf
+
+      - name: Force update output and logs
+        run: |
+          echo "Run time: $(date -u)" >> logs/Global_failed_downloads.log
+
+      - name: Commit and push
         env:
-          GITHUB_TOKEN: ${{ secrets.GG_TOKEN }} # Req: Use secrets.GG_TOKEN
+          TOKEN: ${{ secrets.GG_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add output/Global_List.conf logs/Global_failed_downloads.log
+          git commit -m "Update Global_List.conf and download logs [CI]" || echo "No changes to commit"
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main
