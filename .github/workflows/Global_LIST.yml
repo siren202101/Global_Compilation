@@ -52,4 +52,4 @@ jobs:
 
           git add output/Global_List.conf logs/Global_failed_downloads.log
           git commit -m "Update Global_List.conf and download logs [CI]" || echo "No changes to commit"
-          git push https://x-access-token:${secrets.GG_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force
