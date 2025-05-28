@@ -43,18 +43,18 @@ jobs:
         run: |
           echo "Run time: $(date -u)" >> logs/Global_failed_downloads.log
 
-      - name: 强制提交更改
-        env:
-          TOKEN: ${{ secrets.GG_TOKEN }}
+      - name: 配置 Git 用户信息
         run: |
-          git config --global user.name "siren202101"
-          git config --global user.email "80493699+siren202101@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: 添加文件并提交
+        run: |
           git add output/Global_List.conf logs/Global_failed_downloads.log
+          git commit -m "Update Global_List.conf and logs [CI]" || echo "Nothing to commit"
 
-          # 强制 amend 提交，不论有没有变化
-          git commit --amend --no-edit || echo "Nothing to commit"
-
-          # 用 PAT 强制推送（不会走 bot 身份）
-          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main --force
-
+      - name: 推送更改
+        run: git push origin HEAD:main
+        env:
+          # GITHUB_TOKEN 默认自动注入，使用 GitHub 提供的环境变量
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
