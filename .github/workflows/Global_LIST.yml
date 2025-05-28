@@ -57,4 +57,4 @@ jobs:
         run: git push origin HEAD:main
         env:
           # GITHUB_TOKEN 默认自动注入，使用 GitHub 提供的环境变量
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GG_TOKEN }}
