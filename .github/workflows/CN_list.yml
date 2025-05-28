@@ -1,67 +1,68 @@
-name: Download and Process CN List
+name: Update CN List
 
 on:
   schedule:
-    - cron: '0 0 * * 3'  # 每天执行一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 0 * * *' # 每天凌晨运行
+  workflow_dispatch: # 支持手动触发
 
 jobs:
-  process-cn-urls:
+  update-cn-list:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # 允许推送更改
 
     steps:
-      - name: 检出仓库代码
-        uses: actions/checkout@v3
+      # 检出代码仓库
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: 下载 cn_urls.txt
-        run: |
-          curl -L -o cn_urls.txt "https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt"
+      # 安装 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-      - name: 读取链接并下载文件
-        run: |
-          mkdir -p downloaded_files logs
-          failed_log="logs/cn_failed_downloads.log"
-          > "$failed_log"
-          echo "===== 下载失败日志 =====" >> "$failed_log"
-          echo "时间: $(date)" >> "$failed_log"
-          failed_count=0
-          while IFS= read -r url; do
-            if [ -n "$url" ]; then
-              if ! curl -L --retry 3 --max-time 10 "$url" >> downloaded_files/cn_merged.txt; then
-                echo "$url" >> "$failed_log"
-                ((failed_count++))
-              else
-                echo "" >> downloaded_files/cn_merged.txt
-              fi
-            fi
-          done < cn_urls.txt
-          echo "下载失败的总数: $failed_count" >> "$failed_log"
-          touch "$failed_log"
-
-      - name: 处理 cn_urls 合并的文件
+      # 创建必要的目录
+      - name: Create directories
         run: |
           mkdir -p output
-          grep '^DOMAIN-SUFFIX,' downloaded_files/cn_merged.txt | sed 's/^DOMAIN-SUFFIX,//' | sort -u > output/cn_urls.conf
+          mkdir -p logs
 
-      - name: 下载并处理 accelerated-domains.china.conf
+      # 下载并处理 cn_urls.txt
+      - name: Download and process cn_urls.txt
         run: |
-          curl -L -o downloaded_files/accelerated.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf
-          grep -v '^#' downloaded_files/accelerated.conf | \
-          sed -e 's/^server=\/\(.*\)\/114.114.114.114/\1/' >> output/cn_urls.conf
+          curl -s -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt || echo "Failed to download cn_urls.txt" >> logs/cn_failed_downloads.log
+          if [ -f cn_urls.txt ]; then
+            # 删除注释行、DOMAIN- 开头行、IP- 开头行
+            grep -vE '^#|^DOMAIN-|^IP-' cn_urls.txt > cn_urls_cleaned.txt
+          else
+            echo "cn_urls.txt not found" >> logs/cn_failed_downloads.log
+          fi
 
-      - name: 去重为 cn_list.conf
+      # 下载并处理 accelerated-domains.china.conf
+      - name: Download and process accelerated-domains.china.conf
         run: |
-          sort -u output/cn_urls.conf > output/cn_list.conf
+          curl -s -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf || echo "Failed to download accelerated-domains.china.conf" >> logs/cn_failed_downloads.log
+          if [ -f accelerated-domains.china.conf ]; then
+            # 删除 server=/ 和 /114.114.114.114
+            sed '/server=\//d; /\/114.114.114.114/d' accelerated-domains.china.conf > accelerated_domains_cleaned.txt
+          else
+            echo "accelerated-domains.china.conf not found" >> logs/cn_failed_downloads.log
+          fi
 
-
-      - name: 强制提交更改
+      # 合并文件并去重
+      - name: Merge and deduplicate files
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          
-          # 强制提交文件和日志，即使内容没有变化
+          # 合并文件并去重
+          cat cn_urls_cleaned.txt accelerated_domains_cleaned.txt 2>/dev/null | sort -u > output/cn_list.conf
+          # 如果没有任何输入文件，创建空的 cn_list.conf
+          touch output/cn_list.conf
+          # 确保日志文件存在
+          touch logs/cn_failed_downloads.log
+
+      # 提交更改
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
           git add output/cn_list.conf logs/cn_failed_downloads.log
-          git commit --amend --no-edit || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force
+          git commit -m "Update cn_list.conf and cn_failed_downloads.log" || exit 0
+          git push
