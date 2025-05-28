@@ -1,9 +1,9 @@
 name: Update CN List
 
 on:
-  workflow_dispatch: # 允许手动触发
+  workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: '0 0 * * *' # 每天午夜UTC时间运行
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
 
 jobs:
   update_lists:
@@ -12,97 +12,98 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GG_TOKEN }} # 用于推送更改的TOKEN
+          token: ${{ secrets.GG_TOKEN }} # Token for pushing changes
 
       - name: Create directories
         run: |
           mkdir -p output
           mkdir -p logs
-          # 初始化/清空本次运行的日志文件
+          # Initialize/clear the log file for this run
           > logs/cn_failed_downloads.log
 
-      - name: Download and process cn_urls.txt and its references
+      - name: Download and process cn_urls.txt and its references (for logging, not for final list)
         id: process_cn_urls
         run: |
+          # This step still runs to log any download failures from these sources,
+          # but its output (file1_processed.txt) will NOT be used in cn_list.conf.
           MAIN_LIST_URL="https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt"
           MAIN_LIST_CONTENT_FILE="cn_urls_main_content.txt"
-          RAW_CONTENT_PART1="raw_content_part1.txt"
-          touch "$RAW_CONTENT_PART1" # 确保文件存在，用于累加内容
+          RAW_CONTENT_PART1="raw_content_part1_temp.txt" # Temporary accumulator for this step
+          touch "$RAW_CONTENT_PART1"
 
-          echo "Downloading main list file: $MAIN_LIST_URL"
+          echo "Processing main list file for logging: $MAIN_LIST_URL"
           if ! curl -fSsL "$MAIN_LIST_URL" -o "$MAIN_LIST_CONTENT_FILE"; then
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download $MAIN_LIST_URL" >> logs/cn_failed_downloads.log
+            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download $MAIN_LIST_URL (source 1)" >> logs/cn_failed_downloads.log
           else
-            # 从 cn_urls.txt 中提取直接条目 (非注释且非 *.list 文件名)
             grep -vE '^[a-zA-Z0-9_./-]+\.list$|^#' "$MAIN_LIST_CONTENT_FILE" >> "$RAW_CONTENT_PART1" 2>/dev/null || true
-
-            # 从 cn_urls.txt 中提取引用的 *.list 文件名
             grep -E '^[a-zA-Z0-9_./-]+\.list$' "$MAIN_LIST_CONTENT_FILE" > referenced_list_files.txt 2>/dev/null || true
 
             BASE_URL_FOR_SUB_LISTS="https://raw.githubusercontent.com/siren202101/Global_Compilation/main/"
             while IFS= read -r list_file_name || [ -n "$list_file_name" ]; do
-              if [ -z "$list_file_name" ]; then continue; fi # 跳过空行
-              # 移除可能存在于行尾的CR字符 (回车)
+              if [ -z "$list_file_name" ]; then continue; fi
               list_file_name=$(echo "$list_file_name" | tr -d '\r')
               SUB_LIST_URL="${BASE_URL_FOR_SUB_LISTS}${list_file_name}"
-              echo "Downloading referenced list: $SUB_LIST_URL"
+              echo "Downloading referenced list for logging: $SUB_LIST_URL"
               TEMP_SUB_LIST_CONTENT="temp_sub_list_content.txt"
               if curl -fSsL "$SUB_LIST_URL" -o "$TEMP_SUB_LIST_CONTENT"; then
                 cat "$TEMP_SUB_LIST_CONTENT" >> "$RAW_CONTENT_PART1"
                 rm -f "$TEMP_SUB_LIST_CONTENT"
               else
-                echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download referenced list $SUB_LIST_URL" >> logs/cn_failed_downloads.log
+                echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download referenced list $SUB_LIST_URL (source 1)" >> logs/cn_failed_downloads.log
               fi
             done < referenced_list_files.txt
 
-            echo "Processing accumulated content from cn_urls.txt and its references"
+            # Process for potential intermediate use or inspection, but not for final list
             grep -vE '^#|^DOMAIN-|^IP-' "$RAW_CONTENT_PART1" > file1_processed.txt
-            echo "Part 1 processed successfully."
+            echo "Source 1 (cn_urls.txt derived) processed into file1_processed.txt (will not be in final cn_list.conf)."
           fi
-          # 清理此步骤的临时文件
           rm -f "$MAIN_LIST_CONTENT_FILE" referenced_list_files.txt "$RAW_CONTENT_PART1"
-          # 确保 file1_processed.txt 存在，即使处理失败或无内容
+          # Ensure file1_processed.txt exists, even if empty, to prevent errors if other steps expect it.
           if [ ! -f file1_processed.txt ]; then
-            echo "file1_processed.txt was not created. Creating empty file."
             > file1_processed.txt
           fi
 
-      - name: Download and process accelerated-domains.china.conf
+      - name: Download and process accelerated-domains.china.conf (sole source for final list)
         id: process_accelerated_domains
         run: |
           URL2="https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf"
           ACCELERATED_RAW_FILE="accelerated_raw.txt"
-          echo "Downloading $URL2"
+          echo "Downloading $URL2 (this will be the source for cn_list.conf)"
           if curl -fSsL "$URL2" -o "$ACCELERATED_RAW_FILE"; then
             echo "Processing $ACCELERATED_RAW_FILE"
-            # 删除 "server=/" 和 "/114.114.114.114"
             sed 's|server=/||g; s|/114\.114\.114\.114||g' "$ACCELERATED_RAW_FILE" > file2_processed.txt
-            echo "accelerated-domains.china.conf processed successfully."
+            echo "Source 2 (accelerated-domains.china.conf) processed successfully into file2_processed.txt."
           else
-            echo "Failed to download $URL2"
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download $URL2" >> logs/cn_failed_downloads.log
+            echo "Failed to download $URL2 (source 2)"
+            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download $URL2 (source 2)" >> logs/cn_failed_downloads.log
           fi
-          rm -f "$ACCELERATED_RAW_FILE" # 清理原始下载文件
-          # 确保 file2_processed.txt 存在，即使处理失败或无内容
+          rm -f "$ACCELERATED_RAW_FILE"
           if [ ! -f file2_processed.txt ]; then
-            echo "file2_processed.txt was not created. Creating empty file."
+            echo "file2_processed.txt was not created. Creating empty file for safety."
             > file2_processed.txt
           fi
 
-      - name: Merge, sort, deduplicate, and clean empty lines
+      - name: Prepare final list (from accelerated_domains only), filter comments, sort, and deduplicate
         run: |
-          cat file1_processed.txt file2_processed.txt > merged_list.txt
-          # 排序去重，并删除空行
-          sort -u merged_list.txt | sed '/^[[:space:]]*$/d' > output/cn_list.conf
-          echo "Lists merged, deduplicated, and empty lines removed into output/cn_list.conf"
-          # 清理此阶段及先前阶段输出的临时文件
-          rm -f file1_processed.txt file2_processed.txt merged_list.txt
+          # As per requirements, data from cn_urls.txt sources (file1_processed.txt) is EXCLUDED.
+          # The final list is based solely on data from accelerated-domains.china.conf (file2_processed.txt).
+          
+          echo "Filtering lines starting with '#' from file2_processed.txt (the sole source for the final list)."
+          # Ensure file2_processed.txt is the input for grep. If it could be empty, grep might error.
+          # However, the previous step ensures file2_processed.txt always exists.
+          grep -vE '^#' file2_processed.txt > filtered_list_content.txt
+          
+          echo "Sorting, deduplicating, and removing empty/blank lines."
+          sort -u filtered_list_content.txt | sed '/^[[:space:]]*$/d' > output/cn_list.conf
+          
+          echo "Final list output/cn_list.conf created."
+          # Clean up. file1_processed.txt was generated by the first processing step but is not used in the final list.
+          rm -f file1_processed.txt file2_processed.txt filtered_list_content.txt
 
       - name: Update download log status
         run: |
-          # 如果日志文件为空 (表示没有下载失败), 则写入成功信息
           if [ ! -s logs/cn_failed_downloads.log ]; then
-            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - No download failures in this run." > logs/cn_failed_downloads.log
+            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - No download failures recorded in this run." > logs/cn_failed_downloads.log
           fi
 
       - name: Commit and push changes
@@ -113,13 +114,11 @@ jobs:
           git add output/cn_list.conf
           git add logs/cn_failed_downloads.log
           
-          # 检查是否有实际更改需要提交
           if ! git diff --staged --quiet; then
-            COMMIT_MSG="Update cn_list.conf and download logs - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            COMMIT_MSG="Update cn_list.conf (accelerated_domains only) and logs - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             echo "Changes detected. Committing with message: $COMMIT_MSG"
             git commit -m "$COMMIT_MSG"
           else
-            # 如果没有内容更改，但要求强制更新，则创建一个空提交
             COMMIT_MSG="Scheduled list update check (no content changes) - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
             echo "No content changes detected. Creating an empty commit as per requirement with message: $COMMIT_MSG"
             git commit --allow-empty -m "$COMMIT_MSG"
