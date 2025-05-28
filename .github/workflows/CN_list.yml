@@ -2,67 +2,59 @@ name: Update CN List
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天凌晨运行
-  workflow_dispatch: # 支持手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-cn-list:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码仓库
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 安装 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      # 创建必要的目录
       - name: Create directories
         run: |
           mkdir -p output
           mkdir -p logs
 
-      # 下载并处理 cn_urls.txt
       - name: Download and process cn_urls.txt
         run: |
           curl -s -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt || echo "Failed to download cn_urls.txt" >> logs/cn_failed_downloads.log
           if [ -f cn_urls.txt ]; then
-            # 删除注释行、DOMAIN- 开头行、IP- 开头行
             grep -vE '^#|^DOMAIN-|^IP-' cn_urls.txt > cn_urls_cleaned.txt
           else
             echo "cn_urls.txt not found" >> logs/cn_failed_downloads.log
           fi
 
-      # 下载并处理 accelerated-domains.china.conf
       - name: Download and process accelerated-domains.china.conf
         run: |
           curl -s -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf || echo "Failed to download accelerated-domains.china.conf" >> logs/cn_failed_downloads.log
           if [ -f accelerated-domains.china.conf ]; then
-            # 删除 server=/ 和 /114.114.114.114
             sed '/server=\//d; /\/114.114.114.114/d' accelerated-domains.china.conf > accelerated_domains_cleaned.txt
           else
             echo "accelerated-domains.china.conf not found" >> logs/cn_failed_downloads.log
           fi
 
-      # 合并文件并去重
       - name: Merge and deduplicate files
         run: |
-          # 合并文件并去重
           cat cn_urls_cleaned.txt accelerated_domains_cleaned.txt 2>/dev/null | sort -u > output/cn_list.conf
-          # 如果没有任何输入文件，创建空的 cn_list.conf
           touch output/cn_list.conf
-          # 确保日志文件存在
           touch logs/cn_failed_downloads.log
 
-      # 提交更改
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add output/cn_list.conf logs/cn_failed_downloads.log
           git commit -m "Update cn_list.conf and cn_failed_downloads.log" || exit 0
-          git push
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GG_TOKEN }}
