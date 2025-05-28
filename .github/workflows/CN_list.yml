@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GG_TOKEN }} # 使用 GG_TOKEN 检出仓库
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -55,6 +55,4 @@ jobs:
           git config user.email "actions@github.com"
           git add output/cn_list.conf logs/cn_failed_downloads.log
           git commit -m "Update cn_list.conf and cn_failed_downloads.log" || exit 0
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GG_TOKEN }}
+          git push https://x:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git main
