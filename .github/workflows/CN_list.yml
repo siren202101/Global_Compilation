@@ -32,15 +32,15 @@ jobs:
       # 下载并处理 cn_urls.txt 中的 URL 列表
       - name: Download and process URLs from cn_urls.txt
         run: |
-          curl -L -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt || echo "Failed to download cn_urls.txt at $(date)" >> logs/cn_failed_downloads.log
+          curl -L -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt 2>> logs/cn_failed_downloads.log || { echo "Failed to download cn_urls.txt at $(date)" >> logs/cn_failed_downloads.log; true; }
           if [ -f cn_urls.txt ]; then
             while IFS= read -r url; do
               # 跳过空行或注释行
               [[ -z "$url" || "$url" =~ ^# ]] && continue
               filename=$(echo "$url" | sha1sum | awk '{print $1}').txt
-              curl -L -o "temp/$filename" "$url" || echo "Failed to download $url at $(date)" >> logs/cn_failed_downloads.log
-              if [ -f "temp/$filename" ]; then
-                grep -vE '^#|^DOMAIN-|^IP-' "temp/$filename" > "temp/$filename.cleaned"
+              curl -L -o "temp/$filename" "$url" 2>> logs/cn_failed_downloads.log || { echo "Failed to download $url at $(date)" >> logs/cn_failed_downloads.log; true; }
+              if [ -f "temp/$filename" ] && [ -s "temp/$filename" ]; then
+                grep -vE '^#|^DOMAIN-|^IP-' "temp/$filename" > "temp/$filename.cleaned" 2>> logs/cn_failed_downloads.log || { echo "Failed to process $url at $(date)" >> logs/cn_failed_downloads.log; true; }
               fi
             done < cn_urls.txt
           else
@@ -50,17 +50,17 @@ jobs:
       # 下载并处理 accelerated-domains.china.conf
       - name: Download and process accelerated-domains.china.conf
         run: |
-          curl -L -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf || echo "Failed to download accelerated-domains.china.conf at $(date)" >> logs/cn_failed_downloads.log
-          if [ -f accelerated-domains.china.conf ]; then
-            sed '/server=\//d; /\/114.114.114.114/d' accelerated-domains.china.conf > temp/accelerated_domains_cleaned.txt
+          curl -L -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf 2>> logs/cn_failed_downloads.log || { echo "Failed to download accelerated-domains.china.conf at $(date)" >> logs/cn_failed_downloads.log; true; }
+          if [ -f accelerated-domains.china.conf ] && [ -s accelerated-domains.china.conf ]; then
+            sed '/server=\//d; /\/114.114.114.114/d' accelerated-domains.china.conf > temp/accelerated_domains_cleaned.txt 2>> logs/cn_failed_downloads.log || { echo "Failed to process accelerated-domains.china.conf at $(date)" >> logs/cn_failed_downloads.log; true; }
           else
-            echo "accelerated-domains.china.conf not found at $(date)" >> logs/cn_failed_downloads.log
+            echo "accelerated-domains.china.conf not found or empty at $(date)" >> logs/cn_failed_downloads.log
           fi
 
       # 合并文件并去重
       - name: Merge and deduplicate files
         run: |
-          cat temp/*.cleaned 2>/dev/null | sort -u > output/cn_list.conf
+          cat temp/*.cleaned 2>/dev/null | sort -u > output/cn_list.conf || true
           touch output/cn_list.conf
           touch logs/cn_failed_downloads.log
 
