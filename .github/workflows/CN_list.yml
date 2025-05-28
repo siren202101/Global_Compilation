@@ -1,67 +1,131 @@
-name: Merge CN List
+name: Update CN List
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # 允许手动触发
   schedule:
-    - cron: '0 3 * * *'  # 每天 UTC 时间凌晨 3 点运行
+    - cron: '0 0 * * *' # 每天午夜UTC时间运行
 
 jobs:
-  merge-cn-list:
+  update_lists:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GG_TOKEN }} # 用于推送更改的TOKEN
 
-      - name: Set up working directories
+      - name: Create directories
         run: |
-          mkdir -p logs
           mkdir -p output
+          mkdir -p logs
+          # 初始化/清空本次运行的日志文件
           > logs/cn_failed_downloads.log
 
-      - name: Download cn_urls.txt
+      - name: Download and process cn_urls.txt and its references
+        id: process_cn_urls
         run: |
-          curl -sSL -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt
+          MAIN_LIST_URL="https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt"
+          MAIN_LIST_CONTENT_FILE="cn_urls_main_content.txt"
+          RAW_CONTENT_PART1="raw_content_part1.txt"
+          touch "$RAW_CONTENT_PART1" # 确保文件存在，用于累加内容
 
-      - name: Download and process listed files
-        run: |
-          > combined_list.txt
-          while IFS= read -r url; do
-            if [[ "$url" =~ ^# || "$url" =~ ^DOMAIN- || "$url" =~ ^IP- || -z "$url" ]]; then
-              continue
-            fi
-            echo "Downloading $url"
-            content=$(curl -sSL "$url") || {
-              echo "$url" >> logs/cn_failed_downloads.log
-              continue
-            }
-            echo "$content" >> combined_list.txt
-          done < cn_urls.txt
+          echo "Downloading main list file: $MAIN_LIST_URL"
+          if ! curl -fSsL "$MAIN_LIST_URL" -o "$MAIN_LIST_CONTENT_FILE"; then
+            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download $MAIN_LIST_URL" >> logs/cn_failed_downloads.log
+          else
+            # 从 cn_urls.txt 中提取直接条目 (非注释且非 *.list 文件名)
+            grep -vE '^[a-zA-Z0-9_./-]+\.list$|^#' "$MAIN_LIST_CONTENT_FILE" >> "$RAW_CONTENT_PART1" 2>/dev/null || true
 
-      - name: Clean combined list
-        run: |
-          # 删除注释、DOMAIN-、IP-
-          sed -i '/^#/d' combined_list.txt
-          sed -i '/^DOMAIN-/d' combined_list.txt
-          sed -i '/^IP-/d' combined_list.txt
+            # 从 cn_urls.txt 中提取引用的 *.list 文件名
+            grep -E '^[a-zA-Z0-9_./-]+\.list$' "$MAIN_LIST_CONTENT_FILE" > referenced_list_files.txt 2>/dev/null || true
 
-      - name: Download and clean accelerated-domains.china.conf
-        run: |
-          curl -sSL -o accelerated.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf
-          sed -e 's/^server=\/\(.*\)\/114\.114\.114\.114/\1/' accelerated.conf > cleaned_accelerated.conf
+            BASE_URL_FOR_SUB_LISTS="https://raw.githubusercontent.com/siren202101/Global_Compilation/main/"
+            while IFS= read -r list_file_name || [ -n "$list_file_name" ]; do
+              if [ -z "$list_file_name" ]; then continue; fi # 跳过空行
+              # 移除可能存在于行尾的CR字符 (回车)
+              list_file_name=$(echo "$list_file_name" | tr -d '\r')
+              SUB_LIST_URL="${BASE_URL_FOR_SUB_LISTS}${list_file_name}"
+              echo "Downloading referenced list: $SUB_LIST_URL"
+              TEMP_SUB_LIST_CONTENT="temp_sub_list_content.txt"
+              if curl -fSsL "$SUB_LIST_URL" -o "$TEMP_SUB_LIST_CONTENT"; then
+                cat "$TEMP_SUB_LIST_CONTENT" >> "$RAW_CONTENT_PART1"
+                rm -f "$TEMP_SUB_LIST_CONTENT"
+              else
+                echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download referenced list $SUB_LIST_URL" >> logs/cn_failed_downloads.log
+              fi
+            done < referenced_list_files.txt
 
-      - name: Merge, deduplicate and save final list
+            echo "Processing accumulated content from cn_urls.txt and its references"
+            grep -vE '^#|^DOMAIN-|^IP-' "$RAW_CONTENT_PART1" > file1_processed.txt
+            echo "Part 1 processed successfully."
+          fi
+          # 清理此步骤的临时文件
+          rm -f "$MAIN_LIST_CONTENT_FILE" referenced_list_files.txt "$RAW_CONTENT_PART1"
+          # 确保 file1_processed.txt 存在，即使处理失败或无内容
+          if [ ! -f file1_processed.txt ]; then
+            echo "file1_processed.txt was not created. Creating empty file."
+            > file1_processed.txt
+          fi
+
+      - name: Download and process accelerated-domains.china.conf
+        id: process_accelerated_domains
         run: |
-          cat combined_list.txt cleaned_accelerated.conf | sort -u > output/cn_list.conf
+          URL2="https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf"
+          ACCELERATED_RAW_FILE="accelerated_raw.txt"
+          echo "Downloading $URL2"
+          if curl -fSsL "$URL2" -o "$ACCELERATED_RAW_FILE"; then
+            echo "Processing $ACCELERATED_RAW_FILE"
+            # 删除 "server=/" 和 "/114.114.114.114"
+            sed 's|server=/||g; s|/114\.114\.114\.114||g' "$ACCELERATED_RAW_FILE" > file2_processed.txt
+            echo "accelerated-domains.china.conf processed successfully."
+          else
+            echo "Failed to download $URL2"
+            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - Failed to download $URL2" >> logs/cn_failed_downloads.log
+          fi
+          rm -f "$ACCELERATED_RAW_FILE" # 清理原始下载文件
+          # 确保 file2_processed.txt 存在，即使处理失败或无内容
+          if [ ! -f file2_processed.txt ]; then
+            echo "file2_processed.txt was not created. Creating empty file."
+            > file2_processed.txt
+          fi
+
+      - name: Merge, sort, deduplicate, and clean empty lines
+        run: |
+          cat file1_processed.txt file2_processed.txt > merged_list.txt
+          # 排序去重，并删除空行
+          sort -u merged_list.txt | sed '/^[[:space:]]*$/d' > output/cn_list.conf
+          echo "Lists merged, deduplicated, and empty lines removed into output/cn_list.conf"
+          # 清理此阶段及先前阶段输出的临时文件
+          rm -f file1_processed.txt file2_processed.txt merged_list.txt
+
+      - name: Update download log status
+        run: |
+          # 如果日志文件为空 (表示没有下载失败), 则写入成功信息
+          if [ ! -s logs/cn_failed_downloads.log ]; then
+            echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") - No download failures in this run." > logs/cn_failed_downloads.log
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-
-      - name: Force push updated files with GG_TOKEN
+          git add output/cn_list.conf
+          git add logs/cn_failed_downloads.log
+          
+          # 检查是否有实际更改需要提交
+          if ! git diff --staged --quiet; then
+            COMMIT_MSG="Update cn_list.conf and download logs - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            echo "Changes detected. Committing with message: $COMMIT_MSG"
+            git commit -m "$COMMIT_MSG"
+          else
+            # 如果没有内容更改，但要求强制更新，则创建一个空提交
+            COMMIT_MSG="Scheduled list update check (no content changes) - $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+            echo "No content changes detected. Creating an empty commit as per requirement with message: $COMMIT_MSG"
+            git commit --allow-empty -m "$COMMIT_MSG"
+          fi
+          
+          echo "Pushing changes to repository."
+          git push
         env:
-          GG_TOKEN: ${{ secrets.GG_TOKEN }}
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          
-          git add output/cn_list.conf logs/cn_failed_downloads.log
-          git commit --amend --no-edit || echo "No changes to commit"
-          git push https://x-access-token:${GG_TOKEN}@github.com/siren202101/Global_Compilation.git HEAD:main --force
+          GITHUB_TOKEN: ${{ secrets.GG_TOKEN }}
