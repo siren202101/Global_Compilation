@@ -47,10 +47,14 @@ jobs:
         env:
           TOKEN: ${{ secrets.GG_TOKEN }}
         run: |
-          git config user.name "siren202101"
-          git config user.email "80493699+siren202101@users.noreply.github.com"  # 用你的专属 noreply 邮箱替换
-      
+          git config --global user.name "siren202101"
+          git config --global user.email "80493699+siren202101@users.noreply.github.com"
+
           git add output/Global_List.conf logs/Global_failed_downloads.log
-          git commit --amend --no-edit || echo "No changes to amend"
+
+          # 强制 amend 提交，不论有没有变化
+          git commit --amend --no-edit || echo "Nothing to commit"
+
+          # 用 PAT 强制推送（不会走 bot 身份）
           git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main --force
 
