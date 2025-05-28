@@ -53,13 +53,20 @@ jobs:
       - name: Merge, deduplicate and save final list
         run: |
           cat combined_list.txt cleaned_accelerated.conf | sort -u > output/cn_list.conf
+          
 
       - name: Force push updated files
+        env:
+          GG_TOKEN: ${{ secrets.GG_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/${{ github.repository }}
+
+          # 重新设置远程地址为带 token 的认证方式
+          git remote set-url origin https://x-access-token:${GG_TOKEN}@github.com/${{ github.repository }}
+
           git add output/cn_list.conf logs/cn_failed_downloads.log
           timestamp=$(date)
           git commit -m "Update cn_list.conf and failed downloads log - $timestamp" || echo "No changes to commit"
           git push origin HEAD
+
