@@ -54,10 +54,14 @@ jobs:
         run: |
           cat combined_list.txt cleaned_accelerated.conf | sort -u > output/cn_list.conf
 
-      - name: Force commit updated files
+      - name: Force push updated files
+        env:
+          TOKEN: ${{ secrets.GG_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add output/cn_list.conf logs/cn_failed_downloads.log
-          git commit -m "Update cn_list.conf and failed downloads log" || echo "No changes to commit"
-          git push
+          timestamp=$(date)
+          git commit -m "Update cn_list.conf and failed downloads log - $timestamp" || echo "No changes to commit"
+          git push origin HEAD
