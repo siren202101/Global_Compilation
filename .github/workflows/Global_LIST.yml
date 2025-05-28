@@ -43,13 +43,14 @@ jobs:
         run: |
           echo "Run time: $(date -u)" >> logs/Global_failed_downloads.log
 
-      - name: Commit and push
+      - name: 强制提交更改
         env:
           TOKEN: ${{ secrets.GG_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
+          git config user.name "siren202101"
+          git config user.email "80493699+siren202101@users.noreply.github.com"  # 用你的专属 noreply 邮箱替换
+      
           git add output/Global_List.conf logs/Global_failed_downloads.log
-          git commit -m "Update Global_List.conf and download logs [CI]" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git HEAD:main --force
+          git commit --amend --no-edit || echo "No changes to amend"
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main --force
+
