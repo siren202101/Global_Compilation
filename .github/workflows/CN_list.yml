@@ -2,45 +2,50 @@ name: Update CN List
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天凌晨运行
-  workflow_dispatch: # 支持手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-cn-list:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码仓库
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GG_TOKEN }} # 使用 GG_TOKEN 检出仓库
+          token: ${{ secrets.GG_TOKEN }}
 
-      # 安装 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      # 创建必要的目录
       - name: Create directories
         run: |
           mkdir -p output
           mkdir -p logs
           mkdir -p temp
 
-      # 下载 cn_urls.txt 并处理其包含的 URL 列表
       - name: Download and process URLs from cn_urls.txt
         run: |
-          curl -s -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt || echo "Failed to download cn_urls.txt" >> logs/cn_failed_downloads.log
+          curl -L -s --retry 3 --retry-delay 5 -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt -w "%{http_code}" > http_status.txt || echo "Failed to download cn_urls.txt" >> logs/cn_failed_downloads.log
+          if [ -f http_status.txt ]; then
+            status=$(cat http_status.txt)
+            if [ "$status" != "200" ]; then
+              echo "Download cn_urls.txt failed with HTTP status $status" >> logs/cn_failed_downloads.log
+            fi
+          fi
           if [ -f cn_urls.txt ]; then
-            # 读取 cn_urls.txt 中的每个 URL 并下载
             while IFS= read -r url; do
-              # 跳过空行或注释行
               [[ -z "$url" || "$url" =~ ^# ]] && continue
               filename=$(echo "$url" | sha1sum | awk '{print $1}').txt
-              curl -s -o "temp/$filename" "$url" || echo "Failed to download $url" >> logs/cn_failed_downloads.log
-              # 如果文件下载成功，清理内容
+              curl -L -s --retry 3 --retry-delay 5 -o "temp/$filename" "$url" -w "%{http_code}" > "temp/$filename.status" || echo "Failed to download $url" >> logs/cn_failed_downloads.log
+              if [ -f "temp/$filename.status" ]; then
+                status=$(cat "temp/$filename.status")
+                if [ "$status" != "200" ]; then
+                  echo "Download $url failed with HTTP status $status" >> logs/cn_failed_downloads.log
+                fi
+              fi
               if [ -f "temp/$filename" ]; then
                 grep -vE '^#|^DOMAIN-|^IP-' "temp/$filename" > "temp/$filename.cleaned"
               fi
@@ -49,28 +54,27 @@ jobs:
             echo "cn_urls.txt not found" >> logs/cn_failed_downloads.log
           fi
 
-      # 下载并处理 accelerated-domains.china.conf
       - name: Download and process accelerated-domains.china.conf
         run: |
-          curl -s -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf || echo "Failed to download accelerated-domains.china.conf" >> logs/cn_failed_downloads.log
+          curl -L -s --retry 3 --retry-delay 5 -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf -w "%{http_code}" > accelerated_status.txt || echo "Failed to download accelerated-domains.china.conf" >> logs/cn_failed_downloads.log
+          if [ -f accelerated_status.txt ]; then
+            status=$(cat accelerated_status.txt)
+            if [ "$status" != "200" ]; then
+              echo "Download accelerated-domains.china.conf failed with HTTP status $status" >> logs/cn_failed_downloads.log
+            fi
+          fi
           if [ -f accelerated-domains.china.conf ]; then
-            # 删除 server=/ 和 /114.114.114.114
             sed '/server=\//d; /\/114.114.114.114/d' accelerated-domains.china.conf > temp/accelerated_domains_cleaned.txt
           else
             echo "accelerated-domains.china.conf not found" >> logs/cn_failed_downloads.log
           fi
 
-      # 合并文件并去重
       - name: Merge and deduplicate files
         run: |
-          # 合并所有清理后的文件并去重
           cat temp/*.cleaned 2>/dev/null | sort -u > output/cn_list.conf
-          # 确保输出文件存在
           touch output/cn_list.conf
-          # 确保日志文件存在
           touch logs/cn_failed_downloads.log
 
-      # 提交更改
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions Bot"
