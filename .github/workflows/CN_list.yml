@@ -1,74 +1,63 @@
-name: Update CN List
+name: Merge CN List
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # 每天凌晨运行
-  workflow_dispatch: # 支持手动触发
+    - cron: '0 3 * * *'  # 每天 UTC 时间凌晨 3 点运行
 
 jobs:
-  update-cn-list:
+  merge-cn-list:
     runs-on: ubuntu-latest
 
     steps:
-      # 检出代码仓库
       - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GG_TOKEN }} # 使用 GG_TOKEN 检出仓库
+        uses: actions/checkout@v3
 
-      # 安装 Python 环境
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      # 创建必要的目录
-      - name: Create directories
+      - name: Set up working directories
         run: |
-          mkdir -p output
           mkdir -p logs
-          mkdir -p temp
+          mkdir -p output
+          > logs/cn_failed_downloads.log
 
-      # 下载并处理 cn_urls.txt 中的 URL 列表
-      - name: Download and process URLs from cn_urls.txt
+      - name: Download cn_urls.txt
         run: |
-          curl -L -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt 2>> logs/cn_failed_downloads.log || { echo "Failed to download cn_urls.txt at $(date)" >> logs/cn_failed_downloads.log; true; }
-          if [ -f cn_urls.txt ]; then
-            while IFS= read -r url; do
-              # 跳过空行或注释行
-              [[ -z "$url" || "$url" =~ ^# ]] && continue
-              filename=$(echo "$url" | sha1sum | awk '{print $1}').txt
-              curl -L -o "temp/$filename" "$url" 2>> logs/cn_failed_downloads.log || { echo "Failed to download $url at $(date)" >> logs/cn_failed_downloads.log; true; }
-              if [ -f "temp/$filename" ] && [ -s "temp/$filename" ]; then
-                grep -vE '^#|^DOMAIN-|^IP-' "temp/$filename" > "temp/$filename.cleaned" 2>> logs/cn_failed_downloads.log || { echo "Failed to process $url at $(date)" >> logs/cn_failed_downloads.log; true; }
-              fi
-            done < cn_urls.txt
-          else
-            echo "cn_urls.txt not found at $(date)" >> logs/cn_failed_downloads.log
-          fi
+          curl -sSL -o cn_urls.txt https://raw.githubusercontent.com/siren202101/Global_Compilation/refs/heads/main/cn_urls.txt
 
-      # 下载并处理 accelerated-domains.china.conf
-      - name: Download and process accelerated-domains.china.conf
+      - name: Download and process listed files
         run: |
-          curl -L -o accelerated-domains.china.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf 2>> logs/cn_failed_downloads.log || { echo "Failed to download accelerated-domains.china.conf at $(date)" >> logs/cn_failed_downloads.log; true; }
-          if [ -f accelerated-domains.china.conf ] && [ -s accelerated-domains.china.conf ]; then
-            sed '/server=\//d; /\/114.114.114.114/d' accelerated-domains.china.conf > temp/accelerated_domains_cleaned.txt 2>> logs/cn_failed_downloads.log || { echo "Failed to process accelerated-domains.china.conf at $(date)" >> logs/cn_failed_downloads.log; true; }
-          else
-            echo "accelerated-domains.china.conf not found or empty at $(date)" >> logs/cn_failed_downloads.log
-          fi
+          > combined_list.txt
+          while IFS= read -r url; do
+            if [[ "$url" =~ ^# || "$url" =~ ^DOMAIN- || "$url" =~ ^IP- || -z "$url" ]]; then
+              continue
+            fi
+            echo "Downloading $url"
+            content=$(curl -sSL "$url") || {
+              echo "$url" >> logs/cn_failed_downloads.log
+              continue
+            }
+            echo "$content" >> combined_list.txt
+          done < cn_urls.txt
 
-      # 合并文件并去重
-      - name: Merge and deduplicate files
+      - name: Clean combined list
         run: |
-          cat temp/*.cleaned 2>/dev/null | sort -u > output/cn_list.conf || true
-          touch output/cn_list.conf
-          touch logs/cn_failed_downloads.log
+          # 删除注释、DOMAIN-、IP-
+          sed -i '/^#/d' combined_list.txt
+          sed -i '/^DOMAIN-/d' combined_list.txt
+          sed -i '/^IP-/d' combined_list.txt
 
-      # 提交更改
-      - name: Commit and push changes
+      - name: Download and clean accelerated-domains.china.conf
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          curl -sSL -o accelerated.conf https://fastly.jsdelivr.net/gh/felixonmars/dnsmasq-china-list/accelerated-domains.china.conf
+          sed -e 's/^server=\/\(.*\)\/114\.114\.114\.114/\1/' accelerated.conf > cleaned_accelerated.conf
+
+      - name: Merge, deduplicate and save final list
+        run: |
+          cat combined_list.txt cleaned_accelerated.conf | sort -u > output/cn_list.conf
+
+      - name: Force commit updated files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           git add output/cn_list.conf logs/cn_failed_downloads.log
-          git commit -m "Update cn_list.conf and cn_failed_downloads.log" || exit 0
-          git push https://x:${{ secrets.GG_TOKEN }}@github.com/siren202101/Global_Compilation.git main
+          git commit -m "Update cn_list.conf and failed downloads log" || echo "No changes to commit"
+          git push
